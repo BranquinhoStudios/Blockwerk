@@ -39,9 +39,17 @@
     <h3>The Blockwerk documentation</h3>
 
     <p>The blockwerk uses Lua 5.1, see <a href="https://www.lua.org"><img height=30 width=30 src="https://www.lua.org/images/luaa.gif"/>Lua Official Website</a></p>
-    <br>
     <p>When using the API, you'll notice that there are a few changes—you can use <a href="https://www.lua.org/manual/5.2/manual.html#6.7">bit32</a>, <a href="instance_list.html">Instance</a>, <a href="vetor2D.html">Vector2</a>, <a href="vetor3D.html">Vector3</a>, and even <a href="CFrame.html">CoordinateFrame</a>!</p>
 
+    <br>
+    <h5>Lua Additional functions</h5>
+    <ul>
+      <li>task.spawn (threadOrCoroutine)<br><br>Creates a new thread to run before the scheduler finishes executing the last thread.<br>[Note] This function can cause an infinite number of threads to be created, which may prevent the scheduler from ever finishing executing a thread.</li><br>
+      <li>task.defer (threadOrCoroutine)<br><br>Creates a new thread that will only run once the scheduler has finished executing all existing threads</li><br>
+      <li>task.wait (seconds)<br><br>Puts the thread to sleep; if you don't provide any parameters, your thread will simply be paused and will only run after the scheduler has finished executing all the threads</li><br>
+      <li>table.freeze (table)<br><br>Freezes the table provided as an argument to the function. Note: You cannot unfreeze the table after freezing it, unless you create a new table.</li><br>
+      <li>table.isfrozen (table)<br><br>Checks whether the table is frozen</li>
+    </ul>
     <!-- Copyright warn -->
     <hr>
     <p>Copyright © 2020-2026 Branquinho Studios.</p>
